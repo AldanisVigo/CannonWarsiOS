@@ -123,7 +123,7 @@ public class ChocolateMountainLevel: SKScene, SKPhysicsContactDelegate{
         self.lastCamPos = cam?.position
     }
     var onSlider:Bool = false
-    func respondToTapGesture(sender: UITapGestureRecognizer){
+    @objc func respondToTapGesture(sender: UITapGestureRecognizer){
         //let tapLocation = sender.location(in: self.view)
         if cam?.position == CGPoint(x: self.frame.width / 2, y: self.frame.height / 2) && !onSlider{
             //Add new cannon ball
@@ -154,7 +154,7 @@ public class ChocolateMountainLevel: SKScene, SKPhysicsContactDelegate{
         let slider_background = childNode(withName: "slider_background")
         if !(slider_background?.contains(currentLocation!))!{
             onSlider = false
-            cannon_barrel?.zRotation = CGFloat(angle) * CGFloat(M_PI) / 180.0 + CGFloat(M_PI) * 0.5
+            cannon_barrel?.zRotation = CGFloat(angle) * CGFloat(Double.pi) / 180.0 + CGFloat(Double.pi) * 0.5
         }else{
             onSlider = true
             let slider_knob = childNode(withName: "slider_knob")

@@ -14,8 +14,7 @@ public class WelcomeScene: SKScene , SKPhysicsContactDelegate{
     override public func didMove(to view: SKView) {
         //View Loaded
         //Change background color
-        self.backgroundColor = UIColor(colorLiteralRed: 1.0, green: 0.4, blue: 0.0, alpha: 1.0)
-        
+        self.backgroundColor = UIColor(red: 1.0, green: 0.4, blue: 0.0, alpha: 1.0)
         //Game Title Image
         let game_title = SKSpriteNode(imageNamed: "game_title.png")
         game_title.position = CGPoint(x: self.frame.width / 2, y: self.frame.height * 0.7)
